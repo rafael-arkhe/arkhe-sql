@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "crates/arkhe-sql",
+    "crates/arkhe-sql-migrate"
+]
+resolver = "2"
