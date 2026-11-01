@@ -1,0 +1,54 @@
+{
+  "schema_version": "arkhe-t0-v1",
+  "t0_date": "2026-10-31T00:00:00Z",
+  "scope": {
+    "normative": ["specs/", "criteria/", "method/"],
+    "descriptive": ["CHANGELOG.md", "golden_vectors/"],
+    "excluded": ["implementations/", "executions/"]
+  },
+  "hash_algorithm": "sha256-hex-lowercase",
+  "artifacts": [
+    {
+      "path": "specs/AKG-META-0001-v0.2.md",
+      "sha256": "",
+      "tau": "LEMMA",
+      "normative": true,
+      "note": "pré-registo; execução PENDING"
+    }
+  ],
+  "claims": [
+    {
+      "id": "T0-C-001",
+      "text": "IntentBinding exige serialização canónica e comparação campo a campo; digest isolado é insuficiente.",
+      "tau": "LEMMA",
+      "evidence": "specs/AKG-META-0001-v0.2.md §2; Arkhe-B Order Spec §5",
+      "falsifier": "alterar amount_cents e recalcular o digest; o gate deve rejeitar"
+    },
+    {
+      "id": "T0-C-002",
+      "text": "Canonicalidade total de Ed25519 exige cinco verificações (S, A, R, small-order, cofactorless).",
+      "tau": "LEMMA",
+      "evidence": "RFC 8032; specs/arkhe-b-order-spec-v0.2.md §5",
+      "falsifier": "small_order_A_rejected; torsion_component_R_rejected"
+    }
+  ],
+  "non_claims": [
+    "T0 não afirma que o Arkhe está implementado.",
+    "T0 não afirma prioridade sobre a ideia de 'verificação de execução de IA'.",
+    "T0 não afirma que os 28 INV-BB cobrem todas as classes de falha.",
+    "T0 não afirma que os falsificadores foram executados."
+  ],
+  "provenance": {
+    "changelog": "CHANGELOG.md",
+    "refuted_versions_included": true
+  },
+  "signatures": {
+    "git_commit": "",
+    "sigstore_bundle": "T0.json.bundle"
+  },
+  "amendment_policy": {
+    "t0_immutable": true,
+    "new_t0_requires": "T1 com novo T0.json e nova assinatura",
+    "old_t0_stays_public": true
+  }
+}
