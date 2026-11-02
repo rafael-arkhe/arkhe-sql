@@ -12,3 +12,7 @@ The architecture strictly follows:
 
 - `arkhe-sql`: The core library for interacting with the database, exposing safe APIs that respect the ledger's invariants.
 - `arkhe-sql-migrate`: A specialized CLI tool for running and managing database migrations immutably.
+
+## File Formats and Extensions
+
+For the complete and normative file extension specification across all Arkhe layers, see [File Extensions Specification](file-extensions.md).
