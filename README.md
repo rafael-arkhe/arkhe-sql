@@ -41,6 +41,7 @@ For more detailed technical documentation, please refer to the files in the `doc
 - [MMR Checkpoints](docs/mmr-checkpoints.md)
 - [Row-Level Security (RLS)](docs/rls.md)
 - [Roles & Privileges](docs/roles-and-privileges.md)
+- [File Extensions Specification](docs/file-extensions.md)
 
 ## Crate Structure
 
