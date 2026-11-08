@@ -50,4 +50,4 @@ For more detailed technical documentation, please refer to the files in the `doc
 
 ## License
 
-This project is licensed under the terms found in the LICENSE file.
+This project is licensed under the GNU Affero General Public License version 3. See [LICENSE](LICENSE). A commercial license is available from the copyright holder.
